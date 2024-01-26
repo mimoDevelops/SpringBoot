@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+	<table th:if="${studentList != null}">
+		<tr th:each="s :${studentList}">
+			<td th:text="${s.id}">24</td>
+			<td th:text="${s.name}">Sally</td>
+		</tr>
+	</table>
+
+<br><br>
+
+<form method ="post" action ="sendStudent">
+
+<input type = "hidden" name ="id" />
+Name : <input type = "text" name ="name" />
+<input type = "submit" value = "Go!"/>
+
+</form>
+
+
+</body>
+</html>
